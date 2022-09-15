@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Find Addition
+        const addend1 = parseInt(prompt("Enter the first number"));
+        const addend2 = parseInt(prompt("Enter the second number"));
+        const result = addend1 + addend2;
+        console.log(result);
+
+    </script>
+
+<script>
+    // Find Subtraction
+    const number1 = parseInt(prompt("Enter the first number"));
+    const number2 = parseInt(prompt("Enter the second number"));
+    const solution = number1 - number2;
+    console.log(solution);
+
+    // Find Multiplication
+    const multiplicant1 = parseInt(prompt("Enter the first number"));
+    const multiplicant2 = parseInt(prompt("Enter the second number"));
+    const answer = multiplicant1 * multiplicant2;
+    console.log(answer);
+
+    // Find Division
+    const dividend1 = parseInt(prompt("Enter the first number"));
+    const dividend2 = parseInt(prompt("Enter the second number"));
+    const quotient = dividend1 / dividend2;
+    console.log(quotient);
+
+    // Area of the circle
+    const radius = parseInt(prompt("Enter the radius of the circle"));
+    const areac = Math.PI * radius * radius;
+    console.log(areac);
+
+    // Area of the triangle
+    const breadth = parseInt(prompt("Enter the breadth of the triangle"));
+    const height = parseInt(prompt("Enter the height of the triangle"));
+    const areat = 0.5 * breadth * height;
+    console.log(areat);
+
+    // Simple Interest Calculation
+    const principle = parseInt(prompt("Enter the principal amount"));
+    const years = parseInt(prompt("Enter the number of years"));
+    const rate = parseFloat(prompt("Enter the rate"));
+    const sum = principle * rate * years;
+    const interest = sum/100;
+    console.log(interest);
+
+    // Square calculation
+    const number = parseInt(prompt("Enter the number to square"));
+    const square = Math.pow(number,2);
+    console.log(square);
+
+    //Cube calculation
+    const number3 = parseInt(prompt("Enter the number to cube"));
+    const cube = Math.pow(number,3);
+    console.log(cube);
+
+    // Swap two numbers
+    var swap1 = parseInt(prompt("Enter the first number to swap"));
+    var swap2 = parseInt(prompt("Enter the second number to swap"));
+    var swap = swap1;
+    var swap1 = swap2;
+    var swap2 = swap;
+    console.log(swap1,swap2);
+
+    // Total and average
+    var num1 = parseInt(prompt("Enter the first number"));
+    var num2 = parseInt(prompt("Enter the second number"));
+    var total = num1 + num2;
+    var average = total/2;
+    console.log(total,average);
+
+    // Larger number
+    var num1 = parseInt(prompt("Enter the first number to compare"));
+    var num2 = parseInt(prompt("Enter the second number to compare"));
+    if (num1>num2){
+        console.log(+num1+ " is larger");
+    }
+    else {
+        console.log(+num2+ ' is larger');
+    }
+
+    // Positive or Negative number
+    var num = parseInt(prompt("Enter the number to check"));
+    if (num<0){
+        console.log(+num+ " is negative");
+    }
+    else{
+        console.log(+num+ " is positive");
+    }
+
+    // Greater than 10
+    var num = parseInt(prompt("Enter the number to compare"));
+    if (num>10) {
+        console.log(+num+ ' is greater than 10');
+    }
+    else {
+        console.log(+num+ ' is less than 10');
+    }
+
+    // Even or odd
+    var num = parseInt(prompt("Enter the number to check"));
+    if (num%2 == 0){
+        console.log(+num+ ' is even');
+    }
+    else{
+        console.log(+num+ ' is odd');
+    }
+
+    // Divisible by 5
+    var num = parseInt(prompt("Enter the number to check"));
+    if (num%5 == 0){
+        console.log(+num+ ' is divisible by 5');
+    }
+    else{
+        console.log(+num+ ' is not divisible by 5');
+    }
+
+    //Multiple of 7
+    var num = parseInt(prompt("Enter the number to check"));
+    if (num%7 == 0){
+        console.log(+num+ ' is a multiple of 7');
+    }
+    else{
+        console.log(+num+ ' is not a multiple of 7');
+    }
+
+    // *Max and min of 3 numbers
+    var ascending = [5,10,15];
+    ascending.sort();
+    
+    var descending = [5,15,10];
+    descending.sort().reverse();
+
+    //Quadratic Equation
+    // program to solve quadratic equation
+    let root1, root2;
+
+    // take input from the user
+    let a = prompt("Enter the first number: ");
+    let b = prompt("Enter the second number: ");
+    let c = prompt("Enter the third number: ");
+
+    // calculate discriminant
+    let discriminant = b * b - 4 * a * c;
+
+    // condition for real and different roots
+    if (discriminant > 0) {
+        root1 = (-b + Math.sqrt(discriminant)) / (2 * a);
+        root2 = (-b - Math.sqrt(discriminant)) / (2 * a);
+
+        // result
+        console.log(`The roots of quadratic equation are ${root1} and ${root2}`);
+    }
+
+    // condition for real and equal roots
+    else if (discriminant == 0) {
+        root1 = root2 = -b / (2 * a);
+
+        // result
+        console.log(`The roots of quadratic equation are ${root1} and ${root2}`);
+    }
+
+    // if roots are not real
+    else {
+        let realPart = (-b / (2 * a)).toFixed(2);
+        let imagPart = (Math.sqrt(-discriminant) / (2 * a)).toFixed(2);
+
+        // result
+        console.log(
+        `The roots of quadratic equation are ${realPart} + ${imagPart}i and ${realPart} - ${imagPart}i`
+    );
+    }
+
+    // Grade based on marks
+    var marks = parseInt(prompt("Enter your marks"));
+    if (marks>=90){
+        console.log("O grade");
+    }
+    else if (marks<90 && marks>=75){
+        console.log("A grade");
+    }
+    else if (marks<75 && marks>=60){
+        console.log("B grade");
+    }
+    else if (marks<60 && marks>=50){
+        console.log("C grade");
+    }
+    else if (marks<50 && marks>=35){
+        console.log("D grade");
+    }
+    else{
+        console.log("E grade");
+    }
+
+    // Marriage Eligibility
+    var age = prompt("Please enter your age");
+    if (age>=21){
+        console.log("Congrats! You are eligible for marriage");
+    }
+    else{
+        console.log("Oops! You will have to wait for another year or two");
+    }
+
+
+</script>
+</body>
+</html>

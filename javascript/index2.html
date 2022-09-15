@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Print N numbers in sequence
+        var start = parseInt(prompt("Enter the start range of the sequence"));
+        var end = parseInt(prompt("Enter the end range of the sequence"));
+        for (let i=start;i<=end;i++){
+            console.log(i);
+        }
+
+        // Print N numbers in reverse order
+        var start = parseInt(prompt("Enter the start range of the sequence"));
+        var end = parseInt(prompt("Enter the end range of the sequence"));
+        for (let i=end;i>=start;i--){
+            console.log(i);
+        }
+
+        // Print first N even numbers
+        var even = parseInt(prompt("Enter the number of even numbers to print"));
+        for (let i=1; i<=2*even; i++){
+            if(i%2==0){
+                console.log(i);
+            }
+        }
+
+        // Print N odd numbers
+        var odd = parseInt(prompt("Enter the number of odd numbers to print"));
+        for (let i=0; i<=2*odd; i++){
+            if(i%2!=0){
+                console.log(i);
+            }
+        }
+
+        // Print reverse of a number
+        var number = parseInt(prompt("Enter the number to reverse"));
+        var reverse = 0;
+        while(number>0){
+            var mod = number%10;
+            reverse = reverse*10 + mod;
+            number = parseInt(number/10);
+        }
+        console.log(reverse);
+
+        //Calculate sum of a number
+        var num = parseInt(prompt("Enter the number to sum"));
+        var sum = 0;
+        while(num>0){
+            var mod = num%10;
+            sum = sum + mod;
+            var num = parseInt(num/10);
+        }
+        console.log(sum);
+
+        // Check number is Armstrong or not
+        function CheckArmstrong(num) {
+        let sum = 0;
+        let temp = num;
+        while (temp > 0) {
+            // finding the one's digit
+            let remainder = temp % 10;
+            sum = sum + remainder * remainder * remainder;
+
+            // removing last digit from the number and convert into integer
+            temp = parseInt(temp / 10);
+        }
+
+        if (sum == num) {
+            return `${num} is an Armstrong number`
+        }
+        else {
+            return `${num} is not an Armstrong number`
+        }
+
+        }
+        var number = parseInt(prompt("Enter a 3 digit number to check"));
+        console.log(CheckArmstrong(number));
+        
+
+        // Print Table of given number
+        var table = parseInt(prompt("Enter the number to get the table"));
+        for (let i=1;i<=10;i++){
+            var multiple = table*i;
+            console.log(multiple);
+        }
+
+        // Calculate the sum of given number
+        var range = parseInt(prompt("Enter the range to sum"));
+        var sum=0;
+        for(let i=1; i<=range; i++){
+            sum = sum+i;  
+        }
+        console.log(sum);
+
+        // Factorial of a number using for loop
+        var num = parseInt(prompt("Enter the number for factorial"));
+        var factorial = 1;
+        for (let i=1; i<=num; i++){
+            factorial = factorial*i;
+        }
+        console.log(factorial);
+
+        // Check number is prime or not
+        var num = parseInt(prompt("Enter the number to check"));
+        var flag = 0;
+        if (num==0 || num ==1){
+            flag=1;
+        }
+
+        for (let i=2; i<= Math.sqrt(num); i++){
+            if (num%i == 0){
+                flag=1;
+                break;
+            }
+        }
+
+        if (flag==0){
+            console.log(+num+ " is a prime number");
+        }
+        else {
+            console.log(+num+ " is not a prime number");
+        }
+
+        //Print prime numbers within range
+        
+        const lowerNumber = parseInt(prompt('Enter lower number: '));
+        const higherNumber = parseInt(prompt('Enter higher number: '));
+
+        console.log(`The prime numbers between ${lowerNumber} and ${higherNumber} are:`);
+
+        // looping from lowerNumber to higherNumber
+        for (let i = lowerNumber; i <= higherNumber; i++) {
+            let flag = 0;
+
+        // looping through 2 to user input number
+        for (let j = 2; j < i; j++) {
+            if (i % j == 0) {
+                flag = 1;
+                break;
+            }
+        }
+
+        // if number greater than 1 and not divisible by other numbers
+        if (i > 1 && flag == 0) {
+            console.log(i);
+        }
+        }
+
+        // Print Fibonacci series
+        var f0=0;
+        var f1=1;
+        var num = parseInt(prompt("Enter the range"));
+        console.log(f1);
+        for (let i=1; i<num; i++){
+            var fibbonaci = f0+f1;
+            f0 = f1;
+            f1 = fibbonaci;
+            console.log(fibbonaci);
+        }
+
+        // Print factorial series
+        var start = parseInt(prompt("Enter the start of the range"));
+        var end = parseInt(prompt("Enter the end of the factorial"));
+        var factorial = 1;
+        for (let i=start; i<=end; i++){
+            factorial = factorial*i;
+            console.log(factorial);
+        }
+
+        // Calculate Average of given numbers
+        var myinputarr = [];
+        var size = parseInt(prompt("Enter the size of the array"));
+        
+        for(var a=0; a<size; a++) 
+        {
+            
+            
+            myinputarr[a] = parseInt(prompt('Enter array Element ' + (a+1)));
+        }
+
+        var total=0;
+        for (let i=0; i<myinputarr.length; i++){
+            total = total+myinputarr[i];
+        }
+        var avg = total/myinputarr.length;
+        console.log(+total+ " is the total");
+        console.log(+avg+ " is the average");
+
+    </script>
+</body>
+</html>
